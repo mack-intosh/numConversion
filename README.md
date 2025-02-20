@@ -1,0 +1,1 @@
+//A numerical conversion for converting inbetween binary, decimal, octal, and hexadecimal. Choose one type of input and get the outputs of the other numerical systems. Basically a calculator for swapping number systems.
