@@ -3,7 +3,7 @@
 
 //Header files
 #include "binary.h"
-#include "decimal.h""
+#include "decimal.h"
 #include "octal.h"
 #include "hexadecimal.h"
 //C++ libraries
@@ -34,7 +34,7 @@ int main() {
 		int input; string input2;
 
 		//these vars are just to store outputs, whether they be ints or strings for each set of funcs.
-		string s1,s2,s3; int i1,i2,i3;
+		string s1,s2,s3; int i1,i2;
 
 		//vars to help error checking for each of the inputs
 		bool err = false; int i = 0;
@@ -45,8 +45,8 @@ int main() {
 			cin >> input2;
 			/********************Error Checkinng*****************************/
 			err = false; i = 0;
-			while(err == false && i <= input2.length()) {
-				if (input2[i] != '0' || input2[i] != '1') {
+			while(err == false && i < input2.length()) {
+				if ((input2[i] != '0') && input2[i] != '1') {
 					err = true;
 					cout << "0s and 1s only :)\n";
 					goto b; //yes i use gotos, i like them(in moderation and not too far apart from each other)
@@ -89,7 +89,7 @@ int main() {
 			cin >> input2;
 			/********************Error Checkinng*****************************/
 			err = false; i = 0;
-			while (err == false && i <= input2.length()) {
+			while (err == false && i < input2.length()) {
 				if (input2[i] == '8' || input2[i] == '9') {
 					err = true;
 					cout << "Octal contains the digits \"01234567\" only :)\n";
@@ -112,7 +112,7 @@ int main() {
 		h:
 			/********************Error Checkinng*****************************/
 			err = false; i = 0;
-			while (err == false && i <= input2.length()) {
+			while (err == false && i < input2.length()) {
 				if (input2[i] != '0' || input2[i] != '1' || input2[i] != '2' || input2[i] != '3' || input2[i] != '4' || input2[i] != '5' || input2[i] != '6' || 
 					input2[i] != '7' || input2[i] != '8' || input2[i] != '9' || input2[i] != 'A' || input2[i] != 'B' || input2[i] != 'C' || input2[i] != 'D' || 
 					input2[i] != 'E' || input2[i] != 'F' ) {
